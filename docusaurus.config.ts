@@ -1,52 +1,52 @@
-import { themes as prismThemes } from 'prism-react-renderer';
-import type { Config } from '@docusaurus/types';
-import type * as Preset from '@docusaurus/preset-classic';
-import remarkMath from 'remark-math';
-import rehypeKatex from 'rehype-katex';
+import { themes as prismThemes } from "prism-react-renderer";
+import type { Config } from "@docusaurus/types";
+import type * as Preset from "@docusaurus/preset-classic";
+import remarkMath from "remark-math";
+import rehypeKatex from "rehype-katex";
 
 const config: Config = {
-  title: '粘液科技附属中文 Wiki',
-  tagline: '非官方中文 Wiki',
-  favicon: 'images/favicon.ico',
+  title: "粘液科技附属中文 Wiki",
+  tagline: "非官方中文 Wiki",
+  favicon: "images/favicon.ico",
 
-  url: 'https://slimefun-addons-wiki.guizhanss.cn/',
-  baseUrl: '/',
+  url: "https://slimefun-addons-wiki.guizhanss.cn/",
+  baseUrl: "/",
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   // organizationName: 'facebook', // Usually your GitHub org/user name.
   // projectName: 'docusaurus', // Usually your repo name.
 
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+  onBrokenLinks: "throw",
+  onBrokenMarkdownLinks: "warn",
 
   stylesheets: [
     {
-      href: '/katex/katex.min.css',
-      type: 'text/css',
+      href: "/katex/katex.min.css",
+      type: "text/css",
     },
   ],
 
   i18n: {
-    defaultLocale: 'zh-Hans',
-    locales: ['zh-Hans'],
+    defaultLocale: "zh-Hans",
+    locales: ["zh-Hans"],
   },
 
   presets: [
     [
-      'classic',
+      "classic",
       {
         docs: {
-          routeBasePath: '/',
-          sidebarPath: './sidebars.ts',
+          routeBasePath: "/",
+          sidebarPath: "./sidebars.ts",
           editUrl:
-            'https://github.com/SlimefunGuguProject/Addons-Wiki/tree/master/',
+            "https://github.com/SlimefunGuguProject/Addons-Wiki/tree/master/",
           remarkPlugins: [remarkMath],
           rehypePlugins: [rehypeKatex],
         },
         blog: false,
         theme: {
-          customCss: './src/css/custom.scss',
+          customCss: "./src/css/custom.scss",
         },
       } satisfies Preset.Options,
     ],
@@ -56,72 +56,71 @@ const config: Config = {
     // Replace with your project's social card
     // image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      title: '粘液附属中文 Wiki',
+      title: "粘液附属中文 Wiki",
       logo: {
-        alt: 'Wiki Logo',
-        src: 'images/logo.webp',
+        alt: "Wiki Logo",
+        src: "images/logo.webp",
       },
       items: [
         {
-          type: 'docSidebar',
-          sidebarId: 'rootSidebar',
-          position: 'left',
-          label: 'Wiki 列表',
+          type: "docSidebar",
+          sidebarId: "rootSidebar",
+          position: "left",
+          label: "Wiki 列表",
         },
         {
-          href: 'https://builds.guizhanss.com/',
-          position: 'left',
-          label: '附属下载',
+          href: "https://builds.guizhanss.com/",
+          position: "left",
+          label: "附属下载",
         },
         {
-          href: 'https://hsd.mccaigou.cn/',
-          position: 'left',
-          label: '粘液物品数据库',
+          href: "https://hsd.mccaigou.cn/",
+          position: "left",
+          label: "粘液物品数据库",
         },
         {
-          href: 'https://github.com/SlimefunGuguProject/Addons-Wiki',
-          position: 'right',
-          className: 'header-github-link',
-          'aria-label': 'GitHub repository'
+          href: "https://github.com/SlimefunGuguProject/Addons-Wiki",
+          position: "right",
+          className: "header-github-link",
+          "aria-label": "GitHub repository",
         },
       ],
     },
     footer: {
-      style: 'dark',
+      style: "dark",
       links: [
         {
-          title: '粘液科技官方版',
+          title: "粘液科技官方版",
           items: [
             {
-              label: 'GitHub 仓库',
-              href: 'https://github.com/Slimefun/Slimefun4',
+              label: "GitHub 仓库",
+              href: "https://github.com/Slimefun/Slimefun4",
             },
           ],
         },
         {
-          title: '粘液科技汉化版',
+          title: "粘液科技汉化版",
           items: [
             {
-              label: 'GitHub 仓库',
-              href: 'https://github.com/StarWishsama/Slimefun4',
+              label: "GitHub 仓库",
+              href: "https://github.com/StarWishsama/Slimefun4",
             },
             {
-              label: 'QQ 群 807302496',
-              href: 'https://qm.qq.com/q/e1ow0EiP5K',
+              label: "QQ 群 807302496",
+              href: "https://qm.qq.com/q/e1ow0EiP5K",
             },
-
           ],
         },
         {
-          title: '粘液科技汉化版附属',
+          title: "粘液科技汉化版附属",
           items: [
             {
-              label: '汉化组 GitHub',
-              href: 'https://github.com/SlimefunGuguProject',
+              label: "汉化组 GitHub",
+              href: "https://github.com/SlimefunGuguProject",
             },
             {
-              label: 'QQ 群 205679802',
-              href: 'https://qm.qq.com/q/30BNjvNCMM',
+              label: "QQ 群 205679802",
+              href: "https://qm.qq.com/q/30BNjvNCMM",
             },
           ],
         },
@@ -133,28 +132,29 @@ const config: Config = {
       darkTheme: prismThemes.dracula,
     },
     zoom: {
-      selector: '.image-gallery .image img',
+      selector: ".image-gallery .image img",
       background: {
-        light: 'rgb(255, 255, 255)',
-        dark: 'rgb(50, 50, 50)'
+        light: "rgb(255, 255, 255)",
+        dark: "rgb(50, 50, 50)",
       },
       config: {
         // options you can specify via https://github.com/francoischalifour/medium-zoom#usage
-      }
+      },
     },
     algolia: {
-      appId: 'ATI3VKTB81',
-      apiKey: 'abe82c0148dfc17e87c2d18ba5061e7f',
-      indexName: 'slimefun-addons-guizhanss',
+      appId: "ATI3VKTB81",
+      apiKey: "abe82c0148dfc17e87c2d18ba5061e7f",
+      askAi: "cRhTY6lGx1cg",
+      indexName: "slimefun-addons-guizhanss",
     },
   } satisfies Preset.ThemeConfig,
 
   plugins: [
-    'docusaurus-plugin-sass',
-    'docusaurus-plugin-image-zoom',
+    "docusaurus-plugin-sass",
+    "docusaurus-plugin-image-zoom",
     [
-      '@gracefullight/docusaurus-plugin-cloudflare-analytics',
-      { token: 'be17739788d94d68a5d1b74a8f56de6a' },
+      "@gracefullight/docusaurus-plugin-cloudflare-analytics",
+      { token: "be17739788d94d68a5d1b74a8f56de6a" },
     ],
   ],
 };
