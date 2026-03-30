@@ -15,19 +15,20 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v6
 
-    - name: Set up Node.js
-      uses: actions/setup-node@v4
-      with:
-        node-version: '20.3.0'
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
 
-    - name: Setting up bun
-      uses: oven-sh/setup-bun@v2
+      - name: Setup node
+        uses: actions/setup-node@v6
+        with:
+          node-version: "25.5.0"
+          cache: "pnpm"
 
-    - name: Installing dependencies
-      run: bun install
+      - name: Installing dependencies
+        run: pnpm install
 
-    - name: Run build
-      run: bun run build
+      - name: Run build
+        run: pnpm run build
